@@ -5,19 +5,18 @@ let direction = 'RIGHT';
 let food = { x: 100, y: 100 };
 let snakeImg = new Image();
 let foodImg = new Image();
-foodImg.src = 'zoro.jpg';  // Food image
+foodImg.src = 'zoro.jpg';  // Food img
 let score = 0;
 let gameInterval;
 
-// Set default snake image to "sanji.jpg"
-snakeImg.src = 'sanji.jpg';  // Default snake image
 
-// Function to select snake image
+snakeImg.src = 'sanji.jpg';  // Default snake img
+
+/* select snake img */
 function selectSnake(imageSrc) {
     snakeImg.src = imageSrc;
 }
 
-// Function to start the game
 function startGame() {
     document.getElementById('gameOver').classList.add('hidden');
     document.getElementById('startButton').classList.add('hidden');
@@ -28,25 +27,25 @@ function startGame() {
     direction = 'RIGHT';
     food = { x: 100, y: 100 };
     
-    // Clear any previous intervals and start the game loop
+    //start the game loop
     clearInterval(gameInterval);
-    gameInterval = setInterval(updateGame, 160); // Snake's movement speed
+    gameInterval = setInterval(updateGame, 200); // Snakes speed
 }
 
-// Function to change direction based on key press
+/* direction based on key press */
 function changeDirection(event) {
     if (event.keyCode === 37 && direction !== 'RIGHT') direction = 'LEFT';
     if (event.keyCode === 38 && direction !== 'DOWN') direction = 'UP';
     if (event.keyCode === 39 && direction !== 'LEFT') direction = 'RIGHT';
     if (event.keyCode === 40 && direction !== 'UP') direction = 'DOWN';
     
-    // Prevent page from scrolling when pressing up or down keys
+    // Prevent page from scrolling
     if ([37, 38, 39, 40].includes(event.keyCode)) {
         event.preventDefault();
     }
 }
 
-// Function to update the game state
+//update the game state
 function updateGame() {
     let head = { x: snake[0].x, y: snake[0].y };
     if (direction === 'LEFT') head.x -= 20;
@@ -97,3 +96,4 @@ document.getElementById("leftBtn").addEventListener("click", function () {
 document.getElementById("rightBtn").addEventListener("click", function () {
     if (direction !== "LEFT") direction = "RIGHT";
 });
+
