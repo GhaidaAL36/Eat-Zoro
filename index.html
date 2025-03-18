@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Eat Zoro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Eat Zoro</h1>
+
+        <div id="topScores">
+            <h5>Top Scorses</h5>
+            <h6>Lamia : 1030</h6>
+        </div>
+        
+        <div id="score">Zoros Eaten: 0</div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="gameOver" class="hidden">Zoro Escaped!</div>
+        <button id="startButton" onclick="startGame()">Let’s Eat!</button>
+
+        <div class="controls">
+            <button id="upBtn">▲</button>
+            <div>
+                <button id="leftBtn">◀</button>
+                <button id="rightBtn">▶</button>
+            </div>
+            <button id="downBtn">▼</button>
+        </div>     
+    
+        
+
+        <!-- snake imges -->
+        <div id="snake-selection">
+            <h2>Who Wants to Eat Zoro?</h2>
+            <div class="snake-option">
+                <img src="bonney.jpg" alt="Snake 1" onclick="selectSnake('bonney.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="dofi.jpg" alt="Snake 2" onclick="selectSnake('dofi.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="franky.jpg" alt="Snake 2" onclick="selectSnake('franky.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="hancock.jpg" alt="Snake 2" onclick="selectSnake('hancock.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="ice.jpg" alt="Snake 2" onclick="selectSnake('ice.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="katakuri.jpg" alt="Snake 2" onclick="selectSnake('katakuri.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="kid.jpg" alt="Snake 2" onclick="selectSnake('kid.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="killer.jpg" alt="Snake 2" onclick="selectSnake('killer.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="luffy.jpg" alt="Snake 2" onclick="selectSnake('luffy.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="marco.jpg" alt="Snake 2" onclick="selectSnake('marco.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="nami.jpg" alt="Snake 2" onclick="selectSnake('nami.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="robin.jpg" alt="Snake 2" onclick="selectSnake('robin.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="sabo.jpg" alt="Snake 2" onclick="selectSnake('sabo.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="sanji.jpg" alt="Snake 2" onclick="selectSnake('sanji.jpg')">
+            </div>
+            <div class="snake-option">
+                <img src="usopp.jpg" alt="Snake 2" onclick="selectSnake('usopp.jpg')">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
